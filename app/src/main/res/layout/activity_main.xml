@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="jp.co.casareal.camerabasicsample.MainActivity">
+    android:padding="25dp"
+    android:background="@drawable/gradient_bg"
+    tools:context=".MainActivity">
 
-<!--    カメラの起動ボタン-->
-    <button
-        android:id="@+id/btnLaunchCamera"
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_heigth="match_parent"
-        android:text="@string/launch_camera" />
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/addressContainer"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-<!--    撮影した画像を表示する部分-->
-    <ImageView
-        android:id="@+id/cameraImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            <textview
+                android:id="@id+/address"
+                android:textSize="24sp"
+                android:text="Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
 
-</LinearLayout>
+            </textview>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
